@@ -14,6 +14,7 @@ import { ProductProvider } from './context/ProductContext';
 import { OrderProvider } from './context/OrderContext';
 import { WishlistProvider } from './context/WishlistContext';
 import './App.css';
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -59,6 +60,17 @@ function App() {
                           </motion.div>
                         } />
                         <Route path="*" element={<NotFound />} />
+                        <Route path="/cart" element={
+                          <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.5 }}
+                          >
+                            <Cart />
+                          </motion.div>
+                        } />
+                        
                       </Routes>
                     </AnimatePresence>
                     <Footer />
