@@ -15,6 +15,7 @@ import { OrderProvider } from './context/OrderContext';
 import { WishlistProvider } from './context/WishlistContext';
 import './App.css';
 import Cart from './components/Cart';
+import Login from './components/Login';
 
 function App() {
   return (
@@ -59,6 +60,7 @@ function App() {
                             <Contact />
                           </motion.div>
                         } />
+                        <Route path='/login' element={<Login />} />
                         <Route path="*" element={<NotFound />} />
                         <Route path="/cart" element={
                           <motion.div
