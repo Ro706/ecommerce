@@ -1,14 +1,17 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
-import './Login.css';
+import { ThemeContext } from '../context/ThemeContext';
 import { useNavigate } from 'react-router-dom';
+import './Login.css';
 
 const Login = () => {
   const { login } = useContext(AuthContext);
+  const { theme } = useContext(ThemeContext);
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
-  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,7 +21,7 @@ const Login = () => {
       return;
     }
 
-    // Dummy auth check — replace with real API logic
+    // Dummy login logic — replace with real API call
     const dummyUser = {
       id: 1,
       name: 'John Doe',
@@ -26,13 +29,14 @@ const Login = () => {
     };
 
     login(dummyUser);
-    navigate('/'); // Redirect to home or dashboard
+    navigate('/'); // Redirect after login
   };
 
   return (
-    <div className="login-container">
-      <form className="login-form" onSubmit={handleLogin}>
+    <div className={`login-container ${theme}`}>
+      <form className={`login-form ${theme}`} onSubmit={handleLogin}>
         <h2>Login</h2>
+
         {error && <p className="error">{error}</p>}
 
         <input
@@ -40,6 +44,7 @@ const Login = () => {
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          autoComplete="username"
         />
 
         <input
@@ -47,6 +52,7 @@ const Login = () => {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          autoComplete="current-password"
         />
 
         <button type="submit">Login</button>
