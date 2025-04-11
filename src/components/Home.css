@@ -1,0 +1,130 @@
+.home {
+    flex: 1;
+  }
+  
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1920x600') center/cover no-repeat;
+    color: white;
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .shop-now {
+    padding: 0.8rem 2rem;
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    font-size: 1.1rem;
+  }
+  
+  .featured-products {
+    padding: 3rem 0;
+  }
+  
+  .featured-products h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+  
+  .product-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+  }
+  
+  .product-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .product-card:hover .product-image img {
+    transform: scale(1.05);
+  }
+  
+  .product-actions {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .wishlist-btn {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+  }
+  
+  .product-info {
+    padding: 1rem;
+  }
+  
+  .product-info h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .add-to-cart {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+    }
+    
+    .product-grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
