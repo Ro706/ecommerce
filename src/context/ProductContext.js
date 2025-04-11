@@ -21,6 +21,7 @@ export const ProductProvider = ({ children }) => {
             { id: 6, name: 'Jeans', price: 49.99, image: 'https://via.placeholder.com/150', category: 'clothing' },
             { id: 7, name: 'Running Shoes', price: 89.99, image: 'https://via.placeholder.com/150', category: 'footwear' },
             { id: 8, name: 'Backpack', price: 39.99, image: 'https://via.placeholder.com/150', category: 'accessories' },
+            { id: 9, name: 'Sunglasses', price: 29.99, image: 'https://via.placeholder.com/150', category: 'accessories' },
           ];
           setProducts(mockProducts);
           setLoading(false);

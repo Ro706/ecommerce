@@ -40,8 +40,9 @@ const About = () => {
             transition={{ delay: 0.4 }}
           >
             <h2>Our Team</h2>
-            <div className="team-members">
-              {['John Doe', 'Jane Smith', 'Mike Johnson', 'Sarah Williams'].map((member, index) => (
+            <center>
+            <div className="team-members" align="center">
+              {['Mustafa Hussein', 'Nupur kirwai', 'Rohit Mandal'].map((member, index) => (
                 <motion.div 
                   key={index}
                   className="team-member"
@@ -53,6 +54,7 @@ const About = () => {
                 </motion.div>
               ))}
             </div>
+        </center>
           </motion.div>
         </motion.div>
       </div>
