@@ -13,6 +13,7 @@ import { CartProvider } from './context/CartContext';
 import { ProductProvider } from './context/ProductContext';
 import { OrderProvider } from './context/OrderContext';
 import { WishlistProvider } from './context/WishlistContext';
+import SearchResults from './pages/SearchResults';
 import './App.css';
 import Cart from './components/Cart';
 import Login from './components/Login';
@@ -60,6 +61,8 @@ function App() {
                             <Contact />
                           </motion.div>
                         } />
+                        <Route path="/search" element={<SearchResults />} />
+
                         <Route path='/login' element={<Login />} />
                         <Route path="*" element={<NotFound />} />
                         <Route path="/cart" element={
